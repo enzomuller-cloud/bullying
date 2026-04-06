@@ -250,6 +250,33 @@
             padding: 1rem;
             border-radius: 1.5rem;
         }
+        /* Estilo para o vídeo responsivo */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+            background: #000;
+        }
+        .video-wrapper iframe {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            display: block;
+        }
+        @media (max-width: 768px) {
+            .video-wrapper {
+                border-radius: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -414,6 +441,19 @@
     <!-- Call to Action final -->
     <div style="text-align: center; margin: 1rem 0 2rem 0;">
         <a href="#" style="background: #e65c4f; color: white; padding: 0.9rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 14px rgba(0,0,0,0.1); display: inline-block;">✊ SEJA UM ALIADO - COMPARTILHE ESTA CAMPANHA</a>
+    </div>
+
+    <!-- SEÇÃO DO VÍDEO DO YOUTUBE (antes do rodapé) -->
+    <div class="card" style="background: linear-gradient(135deg, #fef9f0, #fff);">
+        <span class="badge">🎬 ASSISTA</span>
+        <h2>Bullying: entenda, reflita e aja</h2>
+        <p>Um vídeo essencial para compreender o impacto do bullying e como podemos construir relações mais respeitosas. Compartilhe essa mensagem!</p>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NOgWOYf8eE0?si=aHS9zoZUrtsKNCB-" title="Vídeo da campanha contra o bullying" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 0.8rem;">🎯 Compartilhe este vídeo e ajude a espalhar a conscientização. Pequenas atitudes geram grandes mudanças.</p>
     </div>
 </div>
 
