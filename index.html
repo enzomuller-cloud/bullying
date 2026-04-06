@@ -264,11 +264,11 @@
 </header>
 
 <div class="container">
-    <!-- Seção com imagem de destaque -->
+    <!-- Seção com imagem de destaque (primeira URL) -->
     <div class="card img-destaque">
         <div class="img-container">
-            <img class="campaign-img" src="https://placehold.co/900x400/1a4a6f/white?text=Diga+Não+ao+Bullying+%7C+Respeito+Sempre" alt="Campanha contra o bullying - imagem de conscientização" style="width:100%; object-fit: cover;">
-            <div class="img-legenda">Juntos contra o bullying e cyberbullying - sua voz é poderosa</div>
+            <img class="campaign-img" src="https://urupes.sp.gov.br/noticias/upload/postagens/1666287008_85817.jpg" alt="Campanha contra o bullying - conscientização" style="width:100%; object-fit: cover;" onerror="this.onerror=null; this.src='https://placehold.co/900x400/1a4a6f/white?text=Imagem+Bullying+Não+Encontrada';">
+            <div class="img-legenda">Bullying não é brincadeira - Respeito é a base para uma convivência saudável.</div>
         </div>
         <p style="text-align: center; margin-top: 0.8rem;"><strong>Você não está sozinho(a).</strong> Milhares de pessoas ao redor do mundo estão unidas por um ambiente escolar e digital mais seguro.</p>
     </div>
@@ -282,8 +282,10 @@
         <div class="citacao">
             💡 “Aquilo que começa como uma ‘brincadeira’ pode se tornar uma ferida invisível que dura anos. Respeito não é opcional.”
         </div>
+        <!-- Segunda imagem inserida aqui -->
         <div class="img-container" style="margin-top: 1rem;">
-            <img class="campaign-img" src="https://placehold.co/800x300/FFB6C1/1e2a3e?text=Bullying+não+é+brincadeira" alt="Bullying não é brincadeira" style="max-width:100%; border-radius:1rem;">
+            <img class="campaign-img" src="https://cdn-site.contatoseguro.com.br/blog-do-denunciante/images/posts/desktop/Bullying-no-ambiente-de-trabalho-A.jpg" alt="Bullying no ambiente escolar e social" style="max-width:100%; border-radius:1rem;" onerror="this.onerror=null; this.src='https://placehold.co/800x300/FFB6C1/1e2a3e?text=Bullying+não+é+brincadeira';">
+            <div class="img-legenda">O bullying pode acontecer em qualquer ambiente - escola, trabalho ou online. Fique atento!</div>
         </div>
     </div>
 
@@ -333,10 +335,6 @@
         <div class="citacao">
             📢 “Se você presencia bullying, sua omissão pode ser tão dolorosa quanto a agressão. A mudança começa com coragem.”
         </div>
-        <div class="img-container">
-            <img class="campaign-img" src="https://placehold.co/800x280/4A90E2/white?text=Escola+Segura+%7C+Unidos+contra+o+Bullying" alt="Escola contra o bullying" style="max-width:100%; border-radius:1rem;">
-            <div class="img-legenda">Ambientes escolares acolhedores previnem violências e promovem respeito.</div>
-        </div>
         <p>🎯 Campanhas como “Bullying: Faça a coisa certa” e semanas de conscientização no ambiente escolar reduzem os índices de violência em até 40% quando aplicadas com consistência.</p>
     </div>
 
@@ -357,9 +355,6 @@
             </div>
         </div>
         <p>O cyberbullying amplifica o dano porque a humilhação se espalha rapidamente e o agressor pode se esconder no anonimato. Por isso, leis como a <strong>Lei 13.185/2015 (Programa de Combate ao Bullying)</strong> e a inclusão do cyberbullying como infração no Código Penal reforçam a necessidade de responsabilização.</p>
-        <div class="img-container">
-            <img class="campaign-img" src="https://placehold.co/700x200/FF8C42/2d2f36?text=Cyberbullying:+Pare,+Pense+e+Denuncie" alt="Cyberbullying" style="max-width:100%; border-radius:1rem;">
-        </div>
     </div>
 
     <!-- Seção de contato com telefone e botões -->
@@ -444,14 +439,13 @@
         });
     });
 
-    // Feedback no console e segurança
+    // Feedback no console
     console.log("✅ Campanha contra bullying carregada - Respeito é Lei");
     
-    // Tratamento para os botões que não são links internos
+    // Tratamento para botão WhatsApp
     const whatsButton = document.querySelector('.btn-whats');
     if(whatsButton) {
         whatsButton.addEventListener('click', function(e) {
-            // O link já é acionado via onclick, mas garantimos que não haverá duplicação
             console.log("Redirecionando para o WhatsApp de apoio.");
         });
     }
