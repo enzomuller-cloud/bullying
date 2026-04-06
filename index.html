@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Campanha #RespeitoÉLei - Diga Não ao Bullying</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #f5f7fc 0%, #eef2f8 100%);
+            color: #1e2a3e;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, #0b2b3f 0%, #1a4a6f 100%);
+            color: white;
+            padding: 2rem 1.5rem 3rem;
+            text-align: center;
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 0.3rem 1.2rem;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .hero .btn-cta {
+            display: inline-block;
+            background-color: #ff9f4a;
+            color: #1e2a3e;
+            font-weight: bold;
+            padding: 0.8rem 1.8rem;
+            margin-top: 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .hero .btn-cta:hover {
+            background-color: #ffb46e;
+            transform: scale(1.02);
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* cards e seções */
+        .card {
+            background: white;
+            border-radius: 1.8rem;
+            padding: 1.8rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-left: 6px solid #e65c4f;
+            padding-left: 1rem;
+            color: #0f3b4f;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+            margin: 1rem 0 0.6rem 0;
+            color: #1e5a7a;
+        }
+
+        .badge {
+            background: #f0f4fa;
+            border-radius: 100px;
+            padding: 0.2rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #2c6e9e;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+        }
+
+        .grid-dois {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .grid-item {
+            flex: 1 1 280px;
+            background: #fefef7;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            transition: all 0.2s;
+            border: 1px solid #e9edf2;
+        }
+
+        .grid-item i {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .icone-emoj {
+            font-size: 2.4rem;
+        }
+
+        .dicas-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .dicas-list li {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="%234caf50"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>') left center no-repeat;
+            background-size: 1.2rem;
+            padding-left: 1.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .contato-box {
+            background: #eef3fc;
+            border-radius: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .telefone {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #004070;
+            letter-spacing: 1px;
+            background: white;
+            display: inline-block;
+            padding: 0.5rem 1.8rem;
+            border-radius: 60px;
+            margin: 0.8rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .btn-whats {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-whats:hover {
+            background-color: #1ebe5d;
+            transform: scale(1.02);
+        }
+
+        footer {
+            text-align: center;
+            background: #0b2b3f;
+            color: #cbd5e1;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 680px) {
+            .hero h1 { font-size: 1.8rem; }
+            .card { padding: 1.2rem; }
+            .telefone { font-size: 1.4rem; }
+            h2 { font-size: 1.5rem; }
+        }
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ccc, transparent);
+        }
+        .citacao {
+            font-style: italic;
+            background: #f9f3e3;
+            padding: 1rem;
+            border-radius: 1rem;
+            border-left: 4px solid #ff9f4a;
+            margin: 1rem 0;
+        }
+        /* Estilo para imagens */
+        .img-container {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .campaign-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .campaign-img:hover {
+            transform: scale(1.01);
+        }
+        .img-legenda {
+            font-size: 0.85rem;
+            color: #5a6874;
+            margin-top: 0.5rem;
+        }
+        .img-destaque {
+            background: linear-gradient(145deg, #f9f3e3, #fff6ea);
+            padding: 1rem;
+            border-radius: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>🚫 #RESPEITOÉLEI</h1>
+    <div class="tagline">
+        <strong>Bullying e Cyberbullying</strong> têm vítimas reais. <br>
+        Sua atitude pode mudar uma história. 
+    </div>
+    <a href="#contato" class="btn-cta">📞 Preciso de ajuda →</a>
+</header>
+
+<div class="container">
+    <!-- Seção com imagem de destaque -->
+    <div class="card img-destaque">
+        <div class="img-container">
+            <img class="campaign-img" src="https://placehold.co/900x400/1a4a6f/white?text=Diga+Não+ao+Bullying+%7C+Respeito+Sempre" alt="Campanha contra o bullying - imagem de conscientização" style="width:100%; object-fit: cover;">
+            <div class="img-legenda">Juntos contra o bullying e cyberbullying - sua voz é poderosa</div>
+        </div>
+        <p style="text-align: center; margin-top: 0.8rem;"><strong>Você não está sozinho(a).</strong> Milhares de pessoas ao redor do mundo estão unidas por um ambiente escolar e digital mais seguro.</p>
+    </div>
+
+    <!-- Seção: O que é bullying -->
+    <div class="card">
+        <span class="badge">📖 Entenda</span>
+        <h2>O que é Bullying e Cyberbullying?</h2>
+        <p><strong>Bullying</strong> é todo ato de violência física ou psicológica, intencional e repetitivo, que ocorre sem motivação evidente, praticado por um ou mais indivíduos contra outra pessoa, causando dor e angústia. Pode ser insultos, exclusão social, agressões físicas, apelidos ofensivos, entre outros.</p>
+        <p><strong>Cyberbullying</strong> é a versão digital do bullying: acontece por meio de redes sociais, aplicativos de mensagem, e-mails ou jogos online. Inclui humilhação pública, divulgação de mentiras, exposição de dados pessoais, envio de ameaças ou montagens constrangedoras. A diferença é que, no ambiente virtual, a humilhação pode atingir proporções enormes e ficar registrada para sempre.</p>
+        <div class="citacao">
+            💡 “Aquilo que começa como uma ‘brincadeira’ pode se tornar uma ferida invisível que dura anos. Respeito não é opcional.”
+        </div>
+        <div class="img-container" style="margin-top: 1rem;">
+            <img class="campaign-img" src="https://placehold.co/800x300/FFB6C1/1e2a3e?text=Bullying+não+é+brincadeira" alt="Bullying não é brincadeira" style="max-width:100%; border-radius:1rem;">
+        </div>
+    </div>
+
+    <!-- Como acabar / Ações -->
+    <div class="card">
+        <span class="badge">⚡ AÇÃO</span>
+        <h2>Como acabar com o Bullying?</h2>
+        <div class="grid-dois">
+            <div class="grid-item">
+                <div class="icone-emoj">🗣️</div>
+                <h3>Denuncie</h3>
+                <p>Nunca fique em silêncio. Conte para um adulto de confiança, professor, coordenador ou família. As escolas possuem protocolos e canais de denúncia anônima.</p>
+            </div>
+            <div class="grid-item">
+                <div class="icone-emoj">🤝</div>
+                <h3>Apoie a vítima</h3>
+                <p>Mostre solidariedade. Um simples “estou ao seu lado” pode quebrar o isolamento. Não assista passivamente: seja um aliado ativo.</p>
+            </div>
+            <div class="grid-item">
+                <div class="icone-emoj">📱</div>
+                <h3>No cyberbullying</h3>
+                <p>Salve prints como prova, bloqueie agressores, denuncie nas plataformas. Não responda com violência. Use as ferramentas de segurança.</p>
+            </div>
+            <div class="grid-item">
+                <div class="icone-emoj">🧠</div>
+                <h3>Empatia e educação</h3>
+                <p>Campanhas escolares e rodas de conversa transformam a cultura escolar. Conversar sobre diversidade e respeito reduz agressões.</p>
+            </div>
+        </div>
+        <hr>
+        <h3>✅ Dicas práticas para escolas e famílias:</h3>
+        <ul class="dicas-list">
+            <li>Criar comitês contra o bullying com alunos e professores.</li>
+            <li>Incentivar denúncias anônimas (caixa de sugestões ou e-mail específico).</li>
+            <li>Estabelecer regras claras sobre uso da tecnologia e punições educativas.</li>
+            <li>Palestras sobre saúde mental e empatia digital.</li>
+            <li>Nunca normalizar agressões como “coisa de criança”.</li>
+        </ul>
+    </div>
+
+    <!-- Foco especial: bullying nas escolas -->
+    <div class="card">
+        <span class="badge">🏫 ESCOLA</span>
+        <h2>Bullying nas Escolas: realidade silenciosa</h2>
+        <p>De acordo com pesquisas, cerca de 1 em cada 3 estudantes no Brasil já sofreu algum tipo de bullying escolar. Esse fenômeno afeta o rendimento, a autoestima e pode levar a quadros graves de ansiedade, depressão e até automutilação. O ambiente escolar, que deveria ser seguro, muitas vezes se torna um campo de tortura psicológica para milhares de jovens.</p>
+        <p><strong>Como a escola pode agir?</strong> É essencial que os professores estejam preparados para identificar sinais: mudanças de comportamento, isolamento, queda no desempenho, marcas no corpo. Programas como justiça restaurativa e mediação de conflitos têm mostrado resultados positivos. Além disso, a escola deve ter um canal de denúncia acessível e promover assembleias semanais sobre convivência.</p>
+        <div class="citacao">
+            📢 “Se você presencia bullying, sua omissão pode ser tão dolorosa quanto a agressão. A mudança começa com coragem.”
+        </div>
+        <div class="img-container">
+            <img class="campaign-img" src="https://placehold.co/800x280/4A90E2/white?text=Escola+Segura+%7C+Unidos+contra+o+Bullying" alt="Escola contra o bullying" style="max-width:100%; border-radius:1rem;">
+            <div class="img-legenda">Ambientes escolares acolhedores previnem violências e promovem respeito.</div>
+        </div>
+        <p>🎯 Campanhas como “Bullying: Faça a coisa certa” e semanas de conscientização no ambiente escolar reduzem os índices de violência em até 40% quando aplicadas com consistência.</p>
+    </div>
+
+    <!-- efeitos / consequências -->
+    <div class="card">
+        <span class="badge">⚠️ CONSEQUÊNCIAS</span>
+        <h2>Impactos do Bullying e Cyberbullying</h2>
+        <div class="grid-dois">
+            <div class="grid-item">
+                <div class="icone-emoj">😞</div>
+                <h3>Para a vítima</h3>
+                <p>Baixa autoestima, transtornos alimentares, ideação suicida, fobia escolar, isolamento social e traumas duradouros.</p>
+            </div>
+            <div class="grid-item">
+                <div class="icone-emoj">👊</div>
+                <h3>Para o agressor</h3>
+                <p>Normalização da violência, dificuldade em relacionamentos saudáveis, maior risco de envolvimento criminal no futuro.</p>
+            </div>
+        </div>
+        <p>O cyberbullying amplifica o dano porque a humilhação se espalha rapidamente e o agressor pode se esconder no anonimato. Por isso, leis como a <strong>Lei 13.185/2015 (Programa de Combate ao Bullying)</strong> e a inclusão do cyberbullying como infração no Código Penal reforçam a necessidade de responsabilização.</p>
+        <div class="img-container">
+            <img class="campaign-img" src="https://placehold.co/700x200/FF8C42/2d2f36?text=Cyberbullying:+Pare,+Pense+e+Denuncie" alt="Cyberbullying" style="max-width:100%; border-radius:1rem;">
+        </div>
+    </div>
+
+    <!-- Seção de contato com telefone e botões -->
+    <div id="contato" class="card" style="background: linear-gradient(120deg, #fff7eb, #ffffff);">
+        <span class="badge">📞 CANAIS DE AJUDA</span>
+        <h2>Você não está sozinho(a) — Peça ajuda!</h2>
+        <p>Se você está sofrendo bullying ou conhece alguém que precisa de suporte, entre em contato com canais especializados. O diálogo é o primeiro passo para romper o ciclo.</p>
+        
+        <div class="contato-box">
+            <div style="font-size: 1.2rem; font-weight: 600;">📞 Disque 100 - Direitos Humanos</div>
+            <div class="telefone">100</div>
+            <p>Atendimento gratuito, anônimo e funciona 24h para denúncias de violência contra crianças e adolescentes, incluindo bullying.</p>
+        </div>
+
+        <div class="contato-box">
+            <div style="font-size: 1.2rem; font-weight: 600;">🧠 Centro de Valorização da Vida - CVV</div>
+            <div class="telefone">188</div>
+            <p>Apoio emocional e prevenção ao suicídio. Funciona 24h. Ligue ou acesse o chat www.cvv.org.br</p>
+        </div>
+
+        <div class="contato-box">
+            <div style="font-size: 1.2rem; font-weight: 600;">📱 SaferNet Brasil - Cyberbullying</div>
+            <div class="telefone">www.safernet.org.br</div>
+            <p>Canal de denúncias anônimas de conteúdo ilegal ou ofensivo na internet. Orientações para vítimas de cyberbullying.</p>
+            <a href="https://www.safernet.org.br" target="_blank" style="color: #1e5a7a; font-weight: bold; display: inline-block; margin-top: 8px;">Acesse a Central de Denúncias →</a>
+        </div>
+
+        <div class="contato-box" style="background: #d9f0e1;">
+            <div style="font-size: 1.2rem; font-weight: 600;">📱 Atendimento WhatsApp (Orientação psicológica gratuita)</div>
+            <div class="telefone" style="font-size: 1.3rem;">(61) 99656-5001</div>
+            <p>Projeto de apoio contra bullying - converse com voluntários treinados. Atendimento de segunda a sexta, 9h às 18h.</p>
+            <button class="btn-whats" onclick="window.location.href='https://wa.me/5561996565001?text=Olá,%20preciso%20de%20ajuda%20sobre%20bullying'">📲 Conversar no WhatsApp</button>
+        </div>
+
+        <hr>
+        <p><strong>📢 Lembre-se:</strong> Se você testemunha uma situação de bullying ou cyberbullying, denuncie! Guarde prints, registre horários e procure a direção da escola ou conselho tutelar da sua cidade.</p>
+        <div style="text-align: center; margin-top: 1rem;">
+            <a href="#" style="background: #2c6e9e; color: white; padding: 0.5rem 1.8rem; border-radius: 40px; text-decoration: none; display: inline-block;">📧 Denuncie anonimamente: denuncia@respeitoedu.com.br</a>
+        </div>
+    </div>
+
+    <!-- cards de depoimento simbólico -->
+    <div class="card">
+        <span class="badge">💬 RELATO</span>
+        <h2>Palavras de quem venceu o bullying</h2>
+        <div class="grid-dois">
+            <div class="grid-item" style="background: #fcf7f0;">
+                <p>“Na escola, sofri bullying por anos. Achava que o problema era comigo. Até que um professor me ouviu e a escola agiu. Hoje ajudo outros jovens a terem voz.” — <strong>Mariana, 17 anos</strong></p>
+            </div>
+            <div class="grid-item" style="background: #f0f4fa;">
+                <p>“Cyberbullying destruiu minha autoestima, mas denunciei na plataforma e bloqueei os agressores. Ter amigos que me apoiaram fez toda a diferença.” — <strong>Lucas, 19 anos</strong></p>
+            </div>
+        </div>
+        <p style="margin-top: 0.5rem;">Compartilhe sua história usando a hashtag <strong>#RespeitoÉLei</strong> e ajude a inspirar outras pessoas a romper o silêncio.</p>
+    </div>
+
+    <!-- Call to Action final -->
+    <div style="text-align: center; margin: 1rem 0 2rem 0;">
+        <a href="#" style="background: #e65c4f; color: white; padding: 0.9rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 14px rgba(0,0,0,0.1); display: inline-block;">✊ SEJA UM ALIADO - COMPARTILHE ESTA CAMPANHA</a>
+    </div>
+</div>
+
+<footer>
+    <p>💙 Campanha Nacional contra o Bullying e Cyberbullying - 2025 | Respeito é a base para um mundo sem violência.</p>
+    <p>Em caso de emergência envolvendo risco iminente, ligue 190 (Polícia Militar) ou 193 (Bombeiros).</p>
+    <p style="margin-top: 0.8rem;">📌 Lei 14.811/2024 - Política de Prevenção e Combate ao Bullying e Cyberbullying em todo território nacional.</p>
+    <p style="margin-top: 1rem;">✉️ Contato da campanha: campanha@respeitoedu.org.br | Telefone institucional: (11) 3030-7070</p>
+</footer>
+
+<!-- script para rolagem suave e interações -->
+<script>
+    // Rolagem suave para todos os links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if (targetId === "#" || targetId === "") return;
+            const targetElem = document.querySelector(targetId);
+            if (targetElem) {
+                e.preventDefault();
+                targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // Feedback no console e segurança
+    console.log("✅ Campanha contra bullying carregada - Respeito é Lei");
+    
+    // Tratamento para os botões que não são links internos
+    const whatsButton = document.querySelector('.btn-whats');
+    if(whatsButton) {
+        whatsButton.addEventListener('click', function(e) {
+            // O link já é acionado via onclick, mas garantimos que não haverá duplicação
+            console.log("Redirecionando para o WhatsApp de apoio.");
+        });
+    }
+</script>
+</body>
+</html>
